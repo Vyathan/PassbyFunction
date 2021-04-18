@@ -22,25 +22,10 @@ int main()
     cin >> qty;
 
     //Call displayResult Function
-    void displayResult()
-    {
-        totalCst = price * qty;
-
-        //Calculate Discount
-        if(totalCst > 100.00)
-        {
-            dscnt = (totalCst * .05);
-            totalCst = totalCst - dscnt;
-        }
-    }
+    displayResult();
 
     //Call displayCost Fuction
-    void displayCost()
-    {
-        //Display Result
-        cout << fixed << setprecision(2);
-        cout << "The total cost of this product is: $" << totalCst << " and the individual cost is: $" << price << endl;
-    }
+    displayCost();
 
     return 0;
 
@@ -48,3 +33,23 @@ int main()
     cout << "Cost Program Completed." << endl;
 
 }   //End Program
+
+//*****Function Definitions*****//
+void displayResult()
+{
+    totalCst = price * qty;
+
+    //Calculate Discount
+    if(totalCst > 100.00)
+    {
+        dscnt = (totalCst * .05);
+        totalCst = totalCst - dscnt;
+    }
+}//End displayResult
+
+void displayCost()
+{
+     //Display Result
+    cout << fixed << setprecision(2);
+    cout << "The total cost of this product is: $" << totalCst << " and the individual cost is: $" << price << endl;
+}//End displayCost
